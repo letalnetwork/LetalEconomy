@@ -8,12 +8,10 @@ public class OfflineEntity extends AbstractEntity{
 
     private final String name;
     private final UUID uuid;
-    private final LetalEconomyPlugin plugin;
 
-    public OfflineEntity(String name, UUID uuid, LetalEconomyPlugin plugin) {
+    public OfflineEntity(String name, UUID uuid) {
         this.name = name;
         this.uuid = uuid;
-        this.plugin = plugin;
     }
 
     @Override
@@ -51,7 +49,7 @@ public class OfflineEntity extends AbstractEntity{
         return false;
     }
 
-    public AbstractEntity getEntity(){
+    public AbstractEntity getEntity(LetalEconomyPlugin plugin){
         return plugin.getServer().getPlayer(name);
     }
 }

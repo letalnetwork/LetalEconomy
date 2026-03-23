@@ -8,6 +8,7 @@ public class PlayerData {
 
     private final AbstractEntity entity;
     private final Map<String, Double> balances;
+    private boolean updated = false;
 
     public PlayerData(AbstractEntity entity) {
         this.entity = entity;
@@ -18,16 +19,26 @@ public class PlayerData {
         return entity;
     }
 
+    public boolean isUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(boolean updated) {
+        this.updated = updated;
+    }
+
     public Map<String, Double> getBalances() {
         return balances;
     }
 
     public void setBalance(String currency, double balance) {
         balances.put(currency, balance);
+        setUpdated(true);
     }
 
     public double getBalance(String currency) {
         return balances.getOrDefault(currency, 0.0);
     }
+
 
 }

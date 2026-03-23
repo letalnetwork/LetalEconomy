@@ -3,6 +3,7 @@ package dev.loststr1ng.letaleconomy;
 import com.google.inject.Inject;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
+import com.velocitypowered.api.event.proxy.ProxyShutdownEvent;
 import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.ProxyServer;
@@ -33,6 +34,11 @@ public class LetalEconomyVelocity {
         instance = new EconomyVelocity(this);
         instance.onEnable();
         logger.info("LetalEconomy (Velocity) has been enabled!");
+    }
+
+    @Subscribe
+    public void onProxyShutdown(ProxyShutdownEvent event){
+        instance.onDisable();
     }
 
     public ProxyServer getServer() {

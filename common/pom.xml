@@ -12,6 +12,8 @@
     <artifactId>common</artifactId>
     <name>LetalEconomy-Common</name>
 
+
+
     <dependencies>
         <dependency>
             <groupId>org.spongepowered</groupId>

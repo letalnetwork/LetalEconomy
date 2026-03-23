@@ -19,7 +19,7 @@ public class EconomyVelocity extends LetalEconomyPlugin {
         super(plugin.getDataDirectory());
         this.plugin = plugin;
         DataBaseSection section = getConfigManager().getConfig().getDataBaseSection();
-        this.storage = new MySQLStorage(section.host, section.port, section.database, section.username, section.password);
+        this.storage = new MySQLStorage(this);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class EconomyVelocity extends LetalEconomyPlugin {
 
     @Override
     public void onEnable() {
-        //storage.setup();
+        storage.setup();
     }
 
     @Override
