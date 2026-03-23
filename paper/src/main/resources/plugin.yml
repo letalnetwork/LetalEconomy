@@ -1,0 +1,7 @@
+name: LetalEconomy
+version: '1.0'
+main: dev.loststr1ng.letaleconomy.LetalEconomyPaper
+api-version: '1.21'
+prefix: LetalEconomy
+authors: [loststr1ng]
+description: LetalEconomy plugin
