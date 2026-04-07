@@ -9,8 +9,8 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>common</artifactId>
-    <name>LetalEconomy-Common</name>
+    <artifactId>api</artifactId>
+    <name>LetalEconomy-API</name>
 
 
 

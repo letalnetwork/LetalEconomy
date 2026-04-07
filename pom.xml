@@ -17,9 +17,8 @@
     </properties>
 
     <modules>
-        <module>common</module>
+        <module>api</module>
         <module>paper</module>
-        <module>velocity</module>
     </modules>
 
     <build>
@@ -74,7 +73,7 @@
             
             <dependency>
                 <groupId>dev.loststr1ng</groupId>
-                <artifactId>common</artifactId>
+                <artifactId>api</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

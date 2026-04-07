@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>dev.loststr1ng</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>api</artifactId>
         </dependency>
         <dependency>
             <groupId>io.papermc.paper</groupId>

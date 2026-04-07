@@ -1,6 +1,7 @@
 package dev.loststr1ng.letaleconomy.config.sections;
 
 import dev.loststr1ng.letaleconomy.model.Economy;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.configurate.objectmapping.ConfigSerializable;
 
 import java.util.List;
@@ -16,4 +17,8 @@ public class Economies {
     public Map<String, Economy> getEconomiesList() {
         return economyMap;
     }
+
+    public @Nullable Economy getEconomy(String name){
+        return economyMap.get(name);
+    };
 }

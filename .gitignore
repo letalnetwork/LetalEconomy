@@ -4,9 +4,8 @@
 # Log file
 *.log
 
-common/target
+api/target
 paper/target
-velocity/target
 target
 test
 
